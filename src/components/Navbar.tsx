@@ -3,14 +3,15 @@ import logo from "../assets/images/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="nav-bar">
-      <img src={logo} alt="Logo" />
-      <ul className="nav-container">
-        <li className="nav-item">Posts</li>
-        <li className="nav-item">Saved</li>
-      </ul>
-      <SavedPosts />
-    </nav>
+    <header>
+      <img className="logo" src={logo} alt="Logo" />
+      <nav className="nav-bar">
+        <ul className="nav-container">
+          <li className="nav-item">Posts</li>
+          <li className="nav-item">Saved</li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
