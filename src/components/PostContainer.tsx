@@ -1,5 +1,7 @@
+import Post from "./Post";
+
 const PostContainer = () => {
-  return <div>PostContainer</div>;
+  return <Post />;
 };
 
 export default PostContainer;
