@@ -63,3 +63,8 @@ header {
   color: hsl(220, 15%, 55%);
   font-weight: 400;
 }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
