@@ -1,4 +1,3 @@
-import SavedPosts from "../pages/SavedPosts";
 import logo from "../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 

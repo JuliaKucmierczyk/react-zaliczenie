@@ -68,3 +68,8 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+/* SaveBTN components */
+.material-symbols-outlined {
+  display: block;
+}
