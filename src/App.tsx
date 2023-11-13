@@ -1,5 +1,6 @@
 import Aside from "./components/Aside";
 import Navbar from "./components/Navbar";
+import Post from "./components/Post";
 import "./styles/style.css";
 import PostContainer from "./components/PostContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
