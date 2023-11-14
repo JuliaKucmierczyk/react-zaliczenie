@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import PostContainer from "../components/PostContainer";
 import UsersContainer from "../components/UsersContainer";
 
 const Users = () => {

@@ -49,7 +49,7 @@ header {
   padding: 1.6rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.411);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.311);
 }
 .card-image {
   width: 100%;
@@ -75,3 +75,59 @@ header {
 }
 
 /* UsersCard components */
+
+/* Comment */
+.comments-container {
+  max-width: 50rem; /* 1rem is typically 16px */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.comment {
+  padding: 0.7rem 1.4rem;
+  margin-bottom: 1.2rem;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.311);
+}
+
+.comment h3 {
+  margin: 0 0 0.625rem 0;
+  color: #333;
+}
+
+.comment h3 span {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.comment p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* post page */
+
+.post-page {
+  display: flex;
+  padding: 1rem;
+}
+
+.post-page .card-post {
+  max-width: 100%;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .post-page {
+    flex-direction: column;
+  }
+  .post-page .card-post {
+    margin: 1.2rem 0;
+  }
+  .comments-container {
+    padding: 0;
+  }
+}
