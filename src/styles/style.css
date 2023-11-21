@@ -131,3 +131,24 @@ header {
     padding: 0;
   }
 }
+
+/* Main */
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.image-container {
+  /* Your styling here */
+}
+
+.image-container img {
+  width: 100%;
+  display: block; /* Remove extra space below the image */
+  border-radius: 4px; /* If you want rounded corners */
+}
+
+/* Additional responsive design and styling as needed */
