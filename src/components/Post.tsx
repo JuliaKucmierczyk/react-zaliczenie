@@ -4,12 +4,12 @@ import axios from "axios";
 // Define a type for the post
 type PostType = {
   id: number;
-  title: string;
-  body: string;
+  title?: string;
+  body?: string;
   userId: number;
 };
 
-const Post: React.FC = () => {
+const Post: React.FC<PostType> = (title, body) => {
   const [post, setPost] = useState<PostType | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

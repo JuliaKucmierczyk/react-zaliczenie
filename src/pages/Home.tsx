@@ -1,14 +1,12 @@
 import Navbar from "../components/Navbar";
-import PostContainer from "../components/PostContainer";
 import PostPage from "./PostPage";
+import MainContainer from "../components/MainContainer";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <PostPage />
-      {/*  Tylko na razie to tu jest (PostPage) */}
-      <PostContainer />
+      <MainContainer />
     </>
   );
 };
