@@ -9,7 +9,7 @@ type PostType = {
   userId: number;
 };
 
-const Post: React.FC<PostType> = (title, body) => {
+const Post: React.FC<PostType> = () => {
   const [post, setPost] = useState<PostType | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,11 +43,6 @@ const Post: React.FC<PostType> = (title, body) => {
     <article className="card-post">
       {post && (
         <>
-          {/* <img
-            className="card-image"
-            src={`https://via.placeholder.com/600/92c952`}
-            alt={post.title}
-          /> */}
           <div className="card-header">
             <h2 className="card-title">{post.title}</h2>
           </div>

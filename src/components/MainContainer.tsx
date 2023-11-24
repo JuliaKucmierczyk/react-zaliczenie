@@ -1,57 +1,31 @@
 import React, { useState, useEffect } from "react";
-import Post from "./Post"; // Your Post component
+import Post from "../components/Post";
+import Photo from "../components/Photo";
 
 const MainContainer: React.FC = () => {
-  const [items, setItems] = useState<
-    Array<{ type: "post" | "image"; data: any }>
-  >([]);
-
-  useEffect(() => {
-    // Fetch posts
-    const fetchPosts = async () => {
-      const postsResponse = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      const postsData = await postsResponse.json();
-      const posts = postsData
-        .slice(0, 4)
-        .map((post: any) => ({ type: "post", data: post }));
-
-      // Fetch images
-      const imagesResponse = await fetch(
-        "https://jsonplaceholder.typicode.com/photos"
-      );
-      const imagesData = await imagesResponse.json();
-      const images = imagesData
-        .slice(0, 4)
-        .map((image: any) => ({ type: "image", data: image }));
-
-      // Interleave posts and images
-      const combinedItems = [];
-      for (let i = 0; i < posts.length; i++) {
-        combinedItems.push(posts[i], images[i]);
-      }
-
-      setItems(combinedItems);
-    };
-
-    fetchPosts();
-  }, []);
-
   return (
-    <div className="main-container">
-      {items.map((item, index) => {
-        return item.type === "post" ? (
-          // Render the Post component
-          <Post userId={1} id={1} title="mama" body="dasd" />
-        ) : (
-          // Render an image component
-          <div key={`image-${item.data.id}`} className="image-container">
-            <img src={item.data.thumbnailUrl} alt={item.data.title} />
+    <>
+      <section className="main-container">
+        <article className="main-half">
+          <div>
+            <Photo />
+            <Post id={2} userId={1} />
           </div>
-        );
-      })}
-    </div>
+
+          <Photo />
+        </article>
+        <article className="main-half">
+          <div>
+            <Photo />
+            <Photo />
+          </div>
+          <div>
+            <Post id={3} userId={1} />
+            <Post id={1} userId={1} />
+          </div>
+        </article>
+      </section>
+    </>
   );
 };
 
