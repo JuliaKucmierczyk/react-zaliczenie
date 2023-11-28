@@ -8,10 +8,12 @@ body {
   font-family: "Outfit", sans-serif;
   padding: 1rem;
 }
-h1,h2,h3{
+h1,
+h2,
+h3 {
   line-height: 1.5;
 }
-h2{
+h2 {
   margin-bottom: 0.5rem;
 }
 header {
@@ -181,7 +183,7 @@ header {
 }
 
 /* Cards */
-.card{
+.card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
@@ -214,3 +216,51 @@ header {
   }
 }
 
+/* UserTodos */
+
+.todos-container {
+  margin-top: 20px;
+}
+
+.todos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todos-list li {
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.todos-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+/* UserAlbums */
+
+.user-albums {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.album-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.album-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.album-item {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.album-item:hover {
+  color: rgb(122, 151, 44);
+}

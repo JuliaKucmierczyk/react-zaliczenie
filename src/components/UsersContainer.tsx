@@ -1,5 +1,5 @@
 import UsersCard from "./UsersCard";
-import "../styles/style.css"
+import "../styles/style.css";
 
 const UsersContainer = () => {
   return (
@@ -7,18 +7,7 @@ const UsersContainer = () => {
       <h2>Users</h2>
       <div className="grid grid--1x2 grid--1x3">
         <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
-        <UsersCard />
       </div>
-      
     </section>
   );
 };
