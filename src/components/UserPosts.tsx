@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Post {
   userId: number;
@@ -29,12 +30,14 @@ const UserPosts: React.FC<{ userId: number }> = ({ userId }) => {
   return (
     <>
       {posts.map((post) => (
-        <article className="card-post" key={post.id}>
-          <div className="card-header">
-            <h2 className="card-title">{post.title}</h2>
-          </div>
-          <p className="card-text">{post.body}</p>
-        </article>
+        <Link to={`/post/${post.id}`} key={post.id}>
+          <article className="card-post">
+            <div className="card-header">
+              <h2 className="card-title">{post.title}</h2>
+            </div>
+            <p className="card-text">{post.body}</p>
+          </article>
+        </Link>
       ))}
     </>
   );

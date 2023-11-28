@@ -18,7 +18,7 @@ const Post: React.FC = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get<PostType>(
-          "https://jsonplaceholder.typicode.com/posts/1"
+          `https://jsonplaceholder.typicode.com/posts/1`
         );
         setPost(response.data);
         setIsLoading(false);
