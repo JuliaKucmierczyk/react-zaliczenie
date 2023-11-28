@@ -149,14 +149,10 @@ header {
   padding: 1rem;
 }
 
-.image-container {
-  /* Your styling here */
-}
-
 .image-container img {
   width: 100%;
-  display: block; /* Remove extra space below the image */
-  border-radius: 4px; /* If you want rounded corners */
+  display: block;
+  border-radius: 4px;
 }
 
 .thumb {
