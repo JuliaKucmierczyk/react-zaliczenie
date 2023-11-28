@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Album {
   userId: number;
@@ -30,9 +31,9 @@ const UserAlbums: React.FC<{ userId: number }> = ({ userId }) => {
       <h3 className="album-header">User Albums</h3>
       <ul className="album-list">
         {albums.map((album) => (
-          <li className="album-item" key={album.id}>
-            {album.title}
-          </li>
+          <Link to={`/album/${album.id}`} key={album.id}>
+            <li className="album-item">{album.title}</li>
+          </Link>
         ))}
       </ul>
     </div>

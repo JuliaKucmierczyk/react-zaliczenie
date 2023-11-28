@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-// Define a type for the comment
 type CommentType = {
   postId: number;
   id: number;

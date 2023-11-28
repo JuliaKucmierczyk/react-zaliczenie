@@ -16,9 +16,21 @@ h3 {
 h2 {
   margin-bottom: 0.5rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s;
+}
+a:hover {
+  color: rgb(153, 187, 61);
+}
 header {
   display: flex;
   justify-content: space-between;
+}
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 .logo {
@@ -234,6 +246,16 @@ header {
   text-decoration: line-through;
   color: #888;
 }
+/* UsersDetails */
+.user-posts-container {
+  margin-top: 0.3rem;
+}
+.user-posts-container .grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  gap: 1rem 1rem;
+}
+
 /* UserAlbums */
 
 .user-albums {
@@ -257,6 +279,34 @@ header {
   cursor: pointer;
 }
 
-.album-item:hover {
-  color: rgb(122, 151, 44);
+/* Album Details */
+.album-details {
+  padding: 1rem;
+}
+.album-title {
+  font-size: 2rem;
+}
+.album-user {
+  font-weight: 700;
+  background: #838383;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  transition: background 0.3s;
+}
+.album-user:hover {
+  background: rgb(231, 231, 231);
+}
+.flex-cos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.album-images .grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: center;
+  gap: 2rem 2rem;
+}
+.grid img {
+  width: 100%;
 }

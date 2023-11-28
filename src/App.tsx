@@ -4,6 +4,7 @@ import Users from "./pages/Users";
 import Home from "./pages/Home";
 import UserDetails from "./components/UsersDetails";
 import PostDetails from "./components/PostDetails";
+import AlbumDetails from "./components/AlbumDetails";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="users" element={<Users />} />
         <Route path="/user/:userId" element={<UserDetails />} />
         <Route path="/post/:postId" element={<PostDetails />} />
+        <Route path="/album/:albumId" element={<AlbumDetails />} />
       </Routes>
     </BrowserRouter>
   );

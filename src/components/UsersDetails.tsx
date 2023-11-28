@@ -18,8 +18,10 @@ const UserDetails: React.FC = () => {
       <UserInfo userId={Number(userId)} />
       <UserTodos userId={Number(userId)} />
       <h3>User Posts</h3>
-      <div className=" grid grid--1x2 grid--1x3">
-        <UserPosts userId={Number(userId)} />
+      <div className="user-posts-container">
+        <div className=" grid ">
+          <UserPosts userId={Number(userId)} />
+        </div>
       </div>
       <div className=" grid user-album">
         <UserAlbums userId={Number(userId)} />
