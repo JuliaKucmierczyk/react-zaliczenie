@@ -63,8 +63,7 @@ const PostDetails: React.FC = () => {
         {comments.map((comment) => (
           <li key={comment.id}>
             <p>
-              <strong>{comment.name}</strong>{" "}
-              <Link to={`/user/${post?.userId}`}>{`(${comment.email})`}</Link>
+              <strong>{comment.name}</strong>: {comment.email}
             </p>
             <p>{comment.body}</p>
           </li>
