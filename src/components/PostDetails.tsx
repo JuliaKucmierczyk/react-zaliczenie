@@ -24,7 +24,7 @@ interface User {
 }
 
 const PostDetails: React.FC = () => {
-  const { postId }: { postId: string } = useParams();
+  const { postId }: { postId?: string } = useParams();
   const [post, setPost] = useState<Post | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
   const [user, setUser] = useState<User | null>(null);
@@ -77,8 +77,7 @@ const PostDetails: React.FC = () => {
         {comments.map((comment) => (
           <li key={comment.id}>
             <p>
-              <strong>{comment.name}</strong>{" "}
-              <Link to={`/user/${post?.userId}`}>{`(${comment.email})`}</Link>
+              <strong>{comment.name}</strong>: {comment.email}
             </p>
             <p>{comment.body}</p>
           </li>
