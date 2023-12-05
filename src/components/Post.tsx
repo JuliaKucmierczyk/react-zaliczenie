@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; // Załóżmy, że używamy React Router
 
 // Define a type for the post
 type PostType = {
@@ -10,25 +11,25 @@ type PostType = {
 };
 
 const Post: React.FC = () => {
-  const [post, setPost] = useState<PostType | null>(null);
+  const [posts, setPosts] = useState<PostType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPost = async () => {
+    const fetchPosts = async () => {
       try {
-        const response = await axios.get<PostType>(
-          `https://jsonplaceholder.typicode.com/posts/1`
+        const response = await axios.get<PostType[]>(
+          `https://jsonplaceholder.typicode.com/posts?_limit=30`
         );
-        setPost(response.data);
+        setPosts(response.data);
         setIsLoading(false);
       } catch (error) {
-        setError("Error fetching post");
+        setError("Error fetching posts");
         setIsLoading(false);
       }
     };
 
-    fetchPost();
+    fetchPosts();
   }, []);
 
   if (isLoading) {
@@ -40,21 +41,18 @@ const Post: React.FC = () => {
   }
 
   return (
-    <article className="card-post">
-      {post && (
-        <>
-          {/* <img
-            className="card-image"
-            src={`https://via.placeholder.com/600/92c952`}
-            alt={post.title}
-          /> */}
-          <div className="card-header">
-            <h2 className="card-title">{post.title}</h2>
-          </div>
-          <p className="card-text">{post.body}</p>
-        </>
-      )}
-    </article>
+    <>
+      {posts.map((post) => (
+        <Link to={`/post/${post.id}`} key={post.id}>
+          <article className="card-post" style={{ marginBottom: "20px" }}>
+            <div className="card-header">
+              <h2 className="card-title">{post.title}</h2>
+            </div>
+            <p className="card-text">{post.body}</p>
+          </article>
+        </Link>
+      ))}
+    </>
   );
 };
 

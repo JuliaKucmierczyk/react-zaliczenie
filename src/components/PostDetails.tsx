@@ -18,11 +18,16 @@ interface Comment {
   email: string;
   body: string;
 }
+interface User {
+  id: number;
+  name: string;
+}
 
 const PostDetails: React.FC = () => {
   const { postId }: { postId?: number } = useParams();
   const [post, setPost] = useState<Post | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const fetchPostAndComments = async () => {
@@ -36,8 +41,12 @@ const PostDetails: React.FC = () => {
           `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
         );
         setComments(commentsResponse.data);
+        const userResponse = await axios.get<User>(
+          `https://jsonplaceholder.typicode.com/users/${postResponse.data.userId}`
+        );
+        setUser(userResponse.data);
       } catch (error) {
-        console.error("Error fetching post details and comments:", error);
+        console.error("Error fetching album details:", error);
       }
     };
 
@@ -48,12 +57,17 @@ const PostDetails: React.FC = () => {
     <div>
       <Navbar />
       {post ? (
-        <article className="card-post">
-          <div className="card-header">
-            <h2 className="card-title">{post.title}</h2>
-          </div>
-          <p className="card-text">{post.body}</p>
-        </article>
+        <div className="flex-center">
+          <article className="card-post">
+            <div className="card-header">
+              <h2 className="card-title">{post.title}</h2>
+            </div>
+            <p className="card-text">{post.body}</p>
+            <Link to={`/user/${user?.id}`}>
+              <p className="card-post__user">{user?.name}</p>
+            </Link>
+          </article>
+        </div>
       ) : (
         <p>Loading post...</p>
       )}
