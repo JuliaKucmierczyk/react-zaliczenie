@@ -8,7 +8,7 @@ import "../styles/style.css";
 import Navbar from "./Navbar";
 
 const UserDetails: React.FC = () => {
-  const { userId }: { userId: string } = useParams();
+  const { userId }: { userId?: number } = useParams();
 
   return (
     <>

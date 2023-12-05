@@ -20,7 +20,7 @@ interface Comment {
 }
 
 const PostDetails: React.FC = () => {
-  const { postId }: { postId: string } = useParams();
+  const { postId }: { postId?: number } = useParams();
   const [post, setPost] = useState<Post | null>(null);
   const [comments, setComments] = useState<Comment[]>([]);
 
