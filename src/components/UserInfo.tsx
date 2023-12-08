@@ -59,17 +59,28 @@ const UserInfo: React.FC<{ userId: number }> = ({ userId }) => {
             </div>
             <div className="media__body">
               <h3 className="media__title">{user.name}</h3>
-              <p>{user.username},</p>
-              <p>{user.email},</p>
-              <p>Email: {user.email},</p>
               <p>
-                Address: {user.address.street}, {user.address.suite},{" "}
+                <b>Username: </b>
+                {user.username},
+              </p>
+              <p>
+                <b>Email: </b> {user.email},
+              </p>
+              <p>
+                <b>Address: </b> {user.address.street}, {user.address.suite},{" "}
                 {user.address.city}, {user.address.zipcode},
               </p>
-              <p>Phone: {user.phone},</p>
-              <p>Website: {user.website},</p>
               <p>
-                Company: {user.company.name}, {user.company.catchPhrase},{" "}
+                <b>Phone: </b>
+                {user.phone},
+              </p>
+              <p>
+                <b>Website: </b>
+                {user.website},
+              </p>
+              <p>
+                <b>Company: </b>
+                {user.company.name}, {user.company.catchPhrase},{" "}
                 {user.company.bs}
               </p>
             </div>
