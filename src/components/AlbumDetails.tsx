@@ -4,16 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import AlbumImages from "./AlbumImages";
 import "../styles/style.css";
 import Navbar from "./Navbar";
+import { User } from "./UserInfo";
 
 interface Album {
   userId: number;
   id: number;
   title: string;
-}
-
-interface User {
-  id: number;
-  name: string;
 }
 
 const AlbumDetails: React.FC = () => {
