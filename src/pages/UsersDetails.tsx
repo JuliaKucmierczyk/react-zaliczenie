@@ -4,7 +4,6 @@ import UserTodos from "../components/UserTodos";
 import UserPosts from "../components/UserPosts";
 import UserAlbums from "../components/UserAlbums";
 import UserInfo from "../components/UserInfo";
-import "../styles/style.css";
 import Navbar from "../components/Navbar";
 
 const UserDetails: React.FC = () => {

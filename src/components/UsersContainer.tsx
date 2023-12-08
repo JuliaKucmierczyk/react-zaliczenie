@@ -1,5 +1,4 @@
 import UsersCard from "./UsersCard";
-import "../styles/style.css";
 
 const UsersContainer = () => {
   return (

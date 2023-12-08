@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-import "../styles/style.css";
 import { User } from "./UserInfo";
 
 export interface Post {
@@ -12,6 +11,7 @@ export interface Post {
   body: string;
 }
 
+// drugi
 interface Comment {
   postId: number;
   id: number;

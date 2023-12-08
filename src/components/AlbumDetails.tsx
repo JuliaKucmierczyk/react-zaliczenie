@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import AlbumImages from "./AlbumImages";
-import "../styles/style.css";
 import Navbar from "./Navbar";
 import { User } from "./UserInfo";
 
