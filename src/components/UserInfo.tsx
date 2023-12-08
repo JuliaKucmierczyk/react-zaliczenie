@@ -1,4 +1,3 @@
-// UserInfo.tsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -25,6 +24,7 @@ interface User {
     bs: string;
   };
 }
+
 const UserInfo: React.FC<{ userId: number }> = ({ userId }) => {
   const [user, setUser] = useState<User | null>(null);
 

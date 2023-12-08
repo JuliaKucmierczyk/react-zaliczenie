@@ -12,7 +12,7 @@ const UserDetails: React.FC = () => {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <h2>User Details</h2>
       <h3>User Info</h3>
       <UserInfo userId={Number(userId)} />
@@ -23,7 +23,7 @@ const UserDetails: React.FC = () => {
           <UserPosts userId={Number(userId)} />
         </div>
       </div>
-      <div className=" grid user-album">
+      <div className="grid user-album">
         <UserAlbums userId={Number(userId)} />
       </div>
     </>

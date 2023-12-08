@@ -66,7 +66,7 @@ header {
   gap: 2rem;
 }
 .card-post {
-  max-width: 17rem;
+  /* max-width: 17rem; */
   padding: 1.6rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;

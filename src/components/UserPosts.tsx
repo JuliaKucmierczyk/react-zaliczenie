@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
+import { Post } from "./PostDetails";
 
 const UserPosts: React.FC<{ userId: number }> = ({ userId }) => {
   const [posts, setPosts] = useState<Post[]>([]);

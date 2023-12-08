@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../styles/style.css";
 
-interface Post {
+export interface Post {
   userId: number;
   id: number;
   title: string;
@@ -18,6 +18,8 @@ interface Comment {
   email: string;
   body: string;
 }
+
+// są cztery interfajcy nazwane USER
 interface User {
   id: number;
   name: string;

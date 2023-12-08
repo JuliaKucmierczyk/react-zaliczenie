@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+// jeden interfejs jest CommentType drugi Comment
 type CommentType = {
   postId: number;
   id: number;

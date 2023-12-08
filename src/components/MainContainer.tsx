@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Post from "./Post"; // Your Post component
+import Post from "./Post";
 
 const MainContainer: React.FC = () => {
   return (
     <div className="main-container">
-      <Post></Post>
+      <Post />
     </div>
   );
 };
