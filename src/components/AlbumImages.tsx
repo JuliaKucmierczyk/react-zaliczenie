@@ -8,7 +8,7 @@ interface Photo {
   url: string;
 }
 
-const AlbumImages: React.FC<{ albumId: string }> = ({ albumId }) => {
+const AlbumImages: React.FC<{ albumId?: number }> = ({ albumId }) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
 
   useEffect(() => {

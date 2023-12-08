@@ -17,7 +17,7 @@ interface User {
 }
 
 const AlbumDetails: React.FC = () => {
-  const { albumId }: { albumId: string } = useParams();
+  const { albumId }: { albumId?: number } = useParams();
   const [album, setAlbum] = useState<Album | null>(null);
   const [user, setUser] = useState<User | null>(null);
 
