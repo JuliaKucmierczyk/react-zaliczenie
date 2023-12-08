@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import UserTodos from "./UserTodos";
-import UserPosts from "./UserPosts";
-import UserAlbums from "./UserAlbums";
-import UserInfo from "./UserInfo";
+import UserTodos from "../components/UserTodos";
+import UserPosts from "../components/UserPosts";
+import UserAlbums from "../components/UserAlbums";
+import UserInfo from "../components/UserInfo";
 import "../styles/style.css";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 const UserDetails: React.FC = () => {
   const { userId }: { userId?: number } = useParams();

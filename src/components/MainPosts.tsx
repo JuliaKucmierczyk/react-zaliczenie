@@ -9,7 +9,7 @@ type PostType = {
   userId: number;
 };
 
-const Post: React.FC = () => {
+const MainPosts: React.FC = () => {
   const [posts, setPosts] = useState<PostType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -55,4 +55,4 @@ const Post: React.FC = () => {
   );
 };
 
-export default Post;
+export default MainPosts;
