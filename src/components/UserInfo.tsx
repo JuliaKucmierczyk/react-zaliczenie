@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-interface User {
+export interface User {
   id: number;
   name: string;
   username: string;

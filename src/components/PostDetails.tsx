@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../styles/style.css";
+import { User } from "./UserInfo";
 
 export interface Post {
   userId: number;
@@ -17,12 +18,6 @@ interface Comment {
   name: string;
   email: string;
   body: string;
-}
-
-// są cztery interfajcy nazwane USER
-interface User {
-  id: number;
-  name: string;
 }
 
 const PostDetails: React.FC = () => {
