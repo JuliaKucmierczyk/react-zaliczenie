@@ -2,7 +2,7 @@ import "./styles/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Users from "./pages/Users";
 import Home from "./pages/Home";
-import UserDetails from "./components/UsersDetails";
+import UserDetails from "./pages/UsersDetails";
 import PostDetails from "./components/PostDetails";
 import AlbumDetails from "./components/AlbumDetails";
 

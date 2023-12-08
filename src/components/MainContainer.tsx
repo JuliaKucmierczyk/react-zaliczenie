@@ -1,9 +1,9 @@
-import Post from "./Post";
+import MainPosts from "./MainPosts";
 
 const MainContainer: React.FC = () => {
   return (
     <div className="main-container">
-      <Post />
+      <MainPosts />
     </div>
   );
 };
