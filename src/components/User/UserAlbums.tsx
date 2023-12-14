@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Album } from "./AlbumDetails";
+import { Album } from "../AlbumDetails";
 
 const UserAlbums: React.FC<{ userId: number }> = ({ userId }) => {
   const [albums, setAlbums] = useState<Album[]>([]);

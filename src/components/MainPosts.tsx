@@ -40,7 +40,7 @@ const MainPosts: React.FC = () => {
   }
 
   return (
-    <>
+    <section className="main-container">
       {posts.map((post) => (
         <Link to={`/post/${post.id}`} key={post.id}>
           <article className="card-post" style={{ marginBottom: "20px" }}>
@@ -51,7 +51,7 @@ const MainPosts: React.FC = () => {
           </article>
         </Link>
       ))}
-    </>
+    </section>
   );
 };
 

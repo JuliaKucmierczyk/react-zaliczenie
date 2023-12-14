@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import UserTodos from "../components/UserTodos";
-import UserPosts from "../components/UserPosts";
-import UserAlbums from "../components/UserAlbums";
-import UserInfo from "../components/UserInfo";
+import UserTodos from "../components/User/UserTodos";
+import UserPosts from "../components/User/UserPosts";
+import UserAlbums from "../components/User/UserAlbums";
+import UserInfo from "../components/User/UserInfo";
 import Navbar from "../components/Navbar";
 
 const UserDetails: React.FC = () => {

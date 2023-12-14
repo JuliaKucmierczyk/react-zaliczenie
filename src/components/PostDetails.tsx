@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-import { User } from "./UserInfo";
+import { User } from "./User/UserInfo";
 import Comments from "./Comments";
 
 export interface Post {

@@ -1,4 +1,4 @@
-import UsersCard from "./UsersCard";
+import UsersCard from "./UserCards";
 
 const UsersContainer = () => {
   return (

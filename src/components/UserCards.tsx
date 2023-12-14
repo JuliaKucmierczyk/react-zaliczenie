@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { User } from "./UserInfo";
+import { User } from "./User/UserInfo";
 
 const UsersCard: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
