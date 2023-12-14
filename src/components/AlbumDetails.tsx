@@ -5,7 +5,7 @@ import AlbumImages from "./AlbumImages";
 import Navbar from "./Navbar";
 import { User } from "./UserInfo";
 
-interface Album {
+export interface Album {
   userId: number;
   id: number;
   title: string;
