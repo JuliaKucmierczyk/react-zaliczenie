@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import { User } from "./UserInfo";
-import { Comment } from "./Comments";
+import Comments from "./Comments";
 
 export interface Post {
   userId: number;
@@ -15,7 +15,6 @@ export interface Post {
 const PostDetails: React.FC = () => {
   const { postId }: { postId?: number } = useParams();
   const [post, setPost] = useState<Post | null>(null);
-  const [comments, setComments] = useState<Comment[]>([]);
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
@@ -26,10 +25,6 @@ const PostDetails: React.FC = () => {
         );
         setPost(postResponse.data);
 
-        const commentsResponse = await axios.get<Comment[]>(
-          `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
-        );
-        setComments(commentsResponse.data);
         const userResponse = await axios.get<User>(
           `https://jsonplaceholder.typicode.com/users/${postResponse.data.userId}`
         );
@@ -60,18 +55,7 @@ const PostDetails: React.FC = () => {
       ) : (
         <p>Loading post...</p>
       )}
-
-      <h3>Comments</h3>
-      <ul>
-        {comments.map((comment) => (
-          <li key={comment.id}>
-            <p>
-              <strong>{comment.name}</strong>: {comment.email}
-            </p>
-            <p>{comment.body}</p>
-          </li>
-        ))}
-      </ul>
+      <Comments postId={postId} />
     </div>
   );
 };

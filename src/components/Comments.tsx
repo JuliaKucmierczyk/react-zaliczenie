@@ -9,7 +9,7 @@ export interface Comment {
   body: string;
 }
 
-const Comments: React.FC = () => {
+const Comments: React.FC<{ postId?: number }> = ({ postId }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -17,12 +17,9 @@ const Comments: React.FC = () => {
     const fetchComments = async () => {
       try {
         const response = await axios.get<Comment[]>(
-          "https://jsonplaceholder.typicode.com/comments"
+          `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
         );
-        const filteredComments = response.data.filter(
-          (comment) => comment.postId === 1
-        );
-        setComments(filteredComments);
+        setComments(response.data);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching comments:", error);
@@ -31,15 +28,15 @@ const Comments: React.FC = () => {
     };
 
     fetchComments();
-  }, []);
+  }, [postId]);
 
   if (isLoading) {
     return <div>Loading comments...</div>;
   }
 
   return (
-    <div className="comments-container">
-      {/* <h2>Comments for Post ID 1</h2> */}
+    <section className="comments-container">
+      <h2>Comments</h2>
       {comments.map((comment) => (
         <div key={comment.id} className="comment">
           <h3>
@@ -48,7 +45,7 @@ const Comments: React.FC = () => {
           <p>{comment.body}</p>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
