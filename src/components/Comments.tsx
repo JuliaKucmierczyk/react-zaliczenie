@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-// jeden interfejs jest CommentType drugi Comment
-type CommentType = {
+export interface Comment {
   postId: number;
   id: number;
   name: string;
   email: string;
   body: string;
-};
+}
 
 const Comments: React.FC = () => {
-  const [comments, setComments] = useState<CommentType[]>([]);
+  const [comments, setComments] = useState<Comment[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get<CommentType[]>(
+        const response = await axios.get<Comment[]>(
           "https://jsonplaceholder.typicode.com/comments"
         );
         const filteredComments = response.data.filter(

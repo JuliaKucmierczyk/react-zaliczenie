@@ -3,20 +3,12 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import { User } from "./UserInfo";
+import { Comment } from "./Comments";
 
 export interface Post {
   userId: number;
   id: number;
   title: string;
-  body: string;
-}
-
-// drugi
-interface Comment {
-  postId: number;
-  id: number;
-  name: string;
-  email: string;
   body: string;
 }
 
